@@ -652,9 +652,16 @@ const sampleData = {
   ]
 }
 
+
+app.get('/', (req, res) => {
+  res.json(sampleData); // This will now show JSON directly on the homepage
+});
+
+
 app.get('/api/orders', (req, res) => {
   res.json(sampleData);
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
